@@ -1,11 +1,14 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+﻿import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import Login from './pages/Login'
 import Layout from './components/Layout'
 import Dashboard from './pages/Dashboard'
-
-function Placeholder({ title }) {
-  return <h1 className="text-2xl font-bold text-blue-950">{title} (coming next)</h1>
-}
+import Monitoring from './pages/Monitoring'
+import Graph from './pages/Graph'
+import Alerts from './pages/Alert'
+import Bill from './pages/Bill'
+import Reports from './pages/Report'
+import Profile from './pages/Profile'
+import Settings from './pages/Settings'
 
 export default function App() {
   return (
@@ -15,13 +18,13 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/monitoring" element={<Placeholder title="Water Monitoring" />} />
-          <Route path="/graph" element={<Placeholder title="Consumption Graph" />} />
-          <Route path="/alerts" element={<Placeholder title="Leakage Alerts" />} />
-          <Route path="/bill" element={<Placeholder title="Bill Estimator" />} />
-          <Route path="/reports" element={<Placeholder title="Reports" />} />
-          <Route path="/profile" element={<Placeholder title="Profile" />} />
-          <Route path="/settings" element={<Placeholder title="Settings" />} />
+          <Route path="/monitoring" element={<Monitoring />} />
+          <Route path="/graph" element={<Graph />} />
+          <Route path="/alerts" element={<Alerts />} />
+          <Route path="/bill" element={<Bill />} />
+          <Route path="/reports" element={<Reports />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>
